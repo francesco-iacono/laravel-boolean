@@ -8,10 +8,10 @@ use App\Car;
 class HomeController extends Controller
 {
     public function index() {
-        // select all
+        
         $cars = Car::all();
-        dd($cars);
+        
 
-        return view('home');
+        return view('home', ['cars' => $cars]);
     }
 }

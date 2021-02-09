@@ -18,6 +18,7 @@
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+                text-align: center
             }
 
             .full-height {
@@ -64,6 +65,13 @@
         </style>
     </head>
     <body>
-      <h1>Ciao Mondo</h1>
+      <h1>AUTO</h1>
+      <hr>
+
+      @foreach ($cars as $item)
+            <h3>{{ $item->modello }}</h3>
+            <h5>{{ $item->marca }}</h5>
+            <hr>  
+      @endforeach
     </body>
 </html>
